@@ -26,12 +26,14 @@
             class="card rounded-5 shadow mt-4 mx-auto"
             style="width: 18rem; height: 25rem"
           >
-            <img
-              src="{{item.image}}"
-              class="card-img-top mx-auto d-block"
-              alt="{{item.name}}"
-              style="height: 250px; max-width: fit-content"
-            />
+            <a href="{% url 'item_detail' item_id=item.id%}">
+              <img
+                src="{{item.image}}"
+                class="card-img-top mx-auto d-block"
+                alt="{{item.name}}"
+                style="height: 250px; max-width: fit-content"
+              />
+            </a>
             <div class="card-body">
               <h5 class="card-title">
                 <a href="{% url 'item_detail' item_id=item.id%}"
